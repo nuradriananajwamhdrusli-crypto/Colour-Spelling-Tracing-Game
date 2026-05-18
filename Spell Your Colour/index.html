@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colour Spelling Tracing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen">
+            <h1>🎨 Colour Spelling Tracing Game</h1>
+            <p>Pick a colour to start!</p>
+            <div id="color-options">
+                <button class="btn-color" data-color="red" style="background: #ff4d4d;">Red</button>
+                <button class="btn-color" data-color="blue" style="background: #4d94ff;">Blue</button>
+                <button class="btn-color" data-color="green" style="background: #4ecdc4;">Green</button>
+                <button class="btn-color" data-color="yellow" style="background: #ffe66d; color: #333;">Yellow</button>
+                <button class="btn-color" data-color="pink" style="background: #ff85a2;">Pink</button>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="screen hidden">
+            <div class="ui-top">
+                <button id="home-btn" class="btn-nav">🏠 Home</button>
+                <div id="progress-bar"><div id="progress-fill"></div></div>
+                <button id="restart-btn" class="btn-nav">🔄 Restart</button>
+            </div>
+            
+            <h2 id="instruction">Trace the letters with your mouse!</h2>
+            
+            <div class="canvas-wrapper">
+                <canvas id="tracingCanvas"></canvas>
+                <!-- Overlay for celebration messages -->
+                <div id="message-overlay" class="hidden">
+                    <h2 id="success-msg">Great Job!</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
